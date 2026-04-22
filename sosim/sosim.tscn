@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bwn0v5thwql2w"]
+
+[ext_resource type="Script" uid="uid://j8cov15bwj1k" path="res://sosim/sosim.gd" id="1_hdyqy"]
+[ext_resource type="Texture2D" uid="uid://bq2v4200xpnp6" path="res://sosim/backgrounds/4floortemp.jpg" id="2_xpmg3"]
+
+[node name="sosim" type="Control" unique_id=1508430789]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_hdyqy")
+
+[node name="background" type="Sprite2D" parent="." unique_id=63195868]
+modulate = Color(0.6706895, 0.6706895, 0.6706895, 1)
+position = Vector2(639, 306)
+texture = ExtResource("2_xpmg3")
+
+[node name="menu_select" type="TabContainer" parent="." unique_id=772674211]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+current_tab = 1
+
+[node name="Embark" type="Control" parent="menu_select" unique_id=92130235]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Guild" type="Control" parent="menu_select" unique_id=1091845015]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Company" type="Control" parent="menu_select" unique_id=763088705]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Synthesis" type="Control" parent="menu_select" unique_id=1999579724]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3

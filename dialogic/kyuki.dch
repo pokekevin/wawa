@@ -4,9 +4,11 @@
 &"_translation_id": "",
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "New portrait",
 &"description": "",
@@ -17,11 +19,11 @@
 &"portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://1649556538296.png\""
+"image": "\"res://dialogic/art/portrait/kyukitemp.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 0.8,
 "scene": ""
 }
 },

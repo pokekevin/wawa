@@ -1,5 +1,7 @@
 [style name="style"]
 setting "text_speed" = 0.0
+join fey left
+join kyuki right
 fey: ...Anyways, that's the situation.
 fey: I'm out of money.
 fey: You two are going to need to find a job.
@@ -67,6 +69,7 @@ fey: Blah blah, I don't want to hear it. You're smart, you'll figure it out. And
 kei: That doesn't solve anything!
 fey: You'll be fine. Here, I even bought you a sword to celebrate the occasion.
 fey: Don't come back home until you're level 2!
+leave fey
 audio "res://sound/sfx/pump3 to the door.mp3" [volume="0.0"]
 [wait time="2.0"]
 [background fade="0.0"]
@@ -118,6 +121,8 @@ kei: The expectation is that you'd be able to defeat a Guardian Monster but the 
 kei: So for now, we should just focus on mapping out the area. There's still around three weeks or so before the areas begin to scramble.
 kei: There's an entrance down to the fifth floor about ten minutes from here.
 kei: We can leave now while it's still bright outside.
+join  center
+join  center
 kyuki: Wow... you put a lot more thought into this than I was expecting.
 kei: ...
 Is she making fun of me?

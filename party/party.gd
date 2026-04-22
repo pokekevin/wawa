@@ -12,7 +12,7 @@ func stat_raise(doll, stat, value):
 
 
 
-var time_day = 0
+var time_day = 1
 #counts up from 1
 var time_hour = 1
 #counts up to 4 from 1
@@ -76,6 +76,15 @@ func remove_item(item_address: String, amount: int):
 			if items_material.get(item.name)["amount"] == 0:
 				items_material.erase(item.name)
 				return "empty"
+
+
+
+
+var company: Dictionary = {
+	"Rank": 1
+	#F-E-D-C-B-A-S-U
+	
+}
 
 
 
@@ -181,6 +190,7 @@ var savefile: Dictionary
 func update_save():
 	savefile = {
 	"doll_list" : doll_list,
+	
 	"time_day": time_day,
 	"time_hour": time_hour,
 	
@@ -190,6 +200,7 @@ func update_save():
 	"items_loot" : items_loot,
 	"items_material" : items_material,
 	
+	"company": company,
 	
 	"kei": kei,
 	"kyuki": kyuki,
@@ -199,14 +210,16 @@ func update_save():
 func update_party():
 	doll_list = savefile["doll_list"]
 	
-	
 	gold = savefile["gold"]
 	items_equipment = savefile["items_equipment"]
 	items_loot = savefile["items_loot"]
 	items_material = savefile["items_material"]
 	
+	company = savefile["company"]
+	
 	time_day = savefile["time_day"]
 	time_hour = savefile["time_hour"]
+	
 	kei = savefile["kei"]
 	kyuki = savefile["kyuki"]
 	kosellia = savefile["kosellia"]

@@ -1,5 +1,7 @@
 extends Control
 
+var curr
+
 func _input(event):
 	if event.is_action_pressed("menu"):
 		if $menu.is_visible():
@@ -12,8 +14,10 @@ func _input(event):
 
 func _ready():
 	#$expedition/battle.queue_free()
+	#gets rid of existing battles
+	
 	pass
-#gets rid of existing battles
+
 
 
 func _on_battle_battle_end_signal():

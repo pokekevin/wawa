@@ -13,10 +13,6 @@ font_names = PackedStringArray("Segoe UI")
 subpixel_positioning = 0
 oversampling = 2.8
 
-[sub_resource type="SystemFont" id="SystemFont_udkah"]
-font_names = PackedStringArray("Segoe UI")
-subpixel_positioning = 0
-
 [node name="menu" type="Control" unique_id=81154452]
 layout_mode = 3
 anchors_preset = 0
@@ -101,16 +97,16 @@ color = Color(0.238494, 0.196305, 0.232302, 1)
 
 [node name="TabContainer" type="TabContainer" parent="menu_select/Cafe" unique_id=37889570]
 layout_mode = 2
-current_tab = 1
+current_tab = 0
 
 [node name="Kei" type="MarginContainer" parent="menu_select/Cafe/TabContainer" unique_id=664336309]
-visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 metadata/_tab_index = 0
 
 [node name="Dolls" type="MarginContainer" parent="menu_select/Cafe/TabContainer" unique_id=1350888262]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -283,6 +279,10 @@ metadata/_tab_index = 2
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
+
+[node name="ColorRect" type="ColorRect" parent="menu_select/Inventory" unique_id=134514602]
+layout_mode = 2
+color = Color(0.238494, 0.196305, 0.232302, 1)
 
 [node name="TabContainer" type="TabContainer" parent="menu_select/Inventory" unique_id=2100090147]
 layout_mode = 2
@@ -533,6 +533,14 @@ layout_mode = 2
 script = ExtResource("5_fcydj")
 metadata/_tab_index = 4
 
+[node name="ColorRect2" type="ColorRect" parent="menu_select/Settings" unique_id=1849594656]
+layout_mode = 2
+color = Color(0.238494, 0.196305, 0.232302, 1)
+
+[node name="ColorRect" type="ColorRect" parent="menu_select/Settings" unique_id=1808621781]
+layout_mode = 2
+color = Color(0.238494, 0.196305, 0.232302, 1)
+
 [node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Settings" unique_id=354787950]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -552,15 +560,6 @@ text = "Load"
 [node name="exit" type="Button" parent="menu_select/Settings/HBoxContainer/VBoxContainer" unique_id=746695452]
 layout_mode = 2
 text = "                  Exit                   "
-
-[node name="menu_explanation" type="RichTextLabel" parent="." unique_id=400848736]
-layout_mode = 1
-offset_right = 738.0
-offset_bottom = 29.0
-theme_override_fonts/normal_font = SubResource("SystemFont_udkah")
-text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="jukebox" type="AudioStreamPlayer2D" parent="." unique_id=876282989]
 stream = ExtResource("8_cp6tm")

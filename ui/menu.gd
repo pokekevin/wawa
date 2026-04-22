@@ -1,5 +1,6 @@
 extends Control
 #node for the tab menu
+#the big warning sign isnt true anymore btw but i cba to remove
 
 signal party_confirmed
 
