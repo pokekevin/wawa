@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="DollSkill" load_steps=2 format=3 uid="uid://dhttqm7a4c56d"]
+
+[ext_resource type="Script" uid="uid://bplnxhcjek27" path="res://dolls/doll_skill.gd" id="1_v7c6c"]
+
+[resource]
+script = ExtResource("1_v7c6c")
+dsName = "Death Heal"
+dsTier = ""
+dsAD = 25.0
+dsType = "heal"
+dsTarget = "party"
+dsADM = 1.0
+dsLoss = 30.0
+dsCost = 20.0
+dsUnique = ""
+dsCritChance = 0.0
+dsCritMulti = 0.0
+dsPen = 0.0
+dsHealM = 20.0
+dsShieldM = 0.0
+dsAilmentType = "none"
+dsAilmentChance = 0.0
+dsAilmentBase = 0.0
+dsAilmentM = 0.0
+dsAilmentMore = 0.0
+effect1 = "none"
+effect1value = 0.0
+effect2 = "none"
+effect2value = 0.0
+effect3 = "none"
+effect3value = 0.0
+effect4 = "none"
+effect4value = 0.0
+metadata/_custom_type_script = ExtResource("1_v7c6c")

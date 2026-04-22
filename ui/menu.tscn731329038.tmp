@@ -1,0 +1,277 @@
+[gd_scene load_steps=6 format=3 uid="uid://drjepndr8068e"]
+
+[ext_resource type="Script" uid="uid://cpbq0ddwvajiw" path="res://ui/menu.gd" id="1_bwjgb"]
+[ext_resource type="Script" uid="uid://cou1s4cg35lrj" path="res://ui/cafe_ui/doll_list.gd" id="2_udkah"]
+[ext_resource type="Texture2D" uid="uid://dp04xotrj2vqy" path="res://1730842473727061.jpg" id="3_4c782"]
+
+[sub_resource type="SystemFont" id="SystemFont_bwjgb"]
+font_names = PackedStringArray("Segoe UI")
+subpixel_positioning = 0
+oversampling = 2.8
+
+[sub_resource type="SystemFont" id="SystemFont_udkah"]
+font_names = PackedStringArray("Segoe UI")
+subpixel_positioning = 0
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_bwjgb")
+
+[node name="menu_select" type="TabContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = SubResource("SystemFont_bwjgb")
+tab_alignment = 2
+current_tab = 0
+
+[node name="Expedition" type="Control" parent="menu_select"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="doll_choose_list" type="ItemList" parent="menu_select/Expedition"]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 21.0
+offset_right = 300.0
+offset_bottom = 578.0
+select_mode = 1
+
+[node name="doll_choose_confirmation" type="Button" parent="menu_select/Expedition"]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 547.0
+offset_right = 385.0
+offset_bottom = 578.0
+text = "Confirm"
+
+[node name="WARNING" type="TextEdit" parent="menu_select/Expedition"]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 18.0
+offset_right = 754.0
+offset_bottom = 109.0
+text = "IF YOU DO NOT INSTANCE BATTLE FIRST OR SELECT
+MORE/LESS THAN 4 YOUR GAME WILL CRASH
+YES THERE IS A WAY TO FIX IT NO I DO NOT CARE"
+
+[node name="Cafe" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ColorRect" type="ColorRect" parent="menu_select/Cafe"]
+layout_mode = 2
+color = Color(0.238494, 0.196305, 0.232302, 1)
+
+[node name="TabContainer" type="TabContainer" parent="menu_select/Cafe"]
+layout_mode = 2
+current_tab = 1
+
+[node name="Kyuki" type="MarginContainer" parent="menu_select/Cafe/TabContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+metadata/_tab_index = 0
+
+[node name="Dolls" type="MarginContainer" parent="menu_select/Cafe/TabContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("2_udkah")
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.61
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="test_button" type="Button" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "retard"
+
+[node name="Info" type="ReferenceRect" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info"]
+clip_contents = true
+layout_mode = 0
+offset_left = 31.0
+offset_top = 29.0
+offset_right = 318.0
+offset_bottom = 501.0
+
+[node name="name" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Name"
+
+[node name="trait" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Trait: "
+
+[node name="trait_desc" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="seperator" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="dom" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Dominance:"
+
+[node name="inf" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Influence: "
+
+[node name="res" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resolve: "
+
+[node name="tem" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Tempo: "
+
+[node name="pre" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Precision: "
+
+[node name="affinity" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Affinity: "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info"]
+clip_contents = true
+layout_mode = 0
+offset_left = 334.586
+offset_top = 29.0
+offset_right = 621.586
+offset_bottom = 501.0
+
+[node name="class_name" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Class:"
+
+[node name="family" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Family: "
+
+[node name="tier" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Tier: "
+
+[node name="trait" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Trait:
+"
+
+[node name="trait_desc" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="seperator" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="skill1" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 1: "
+
+[node name="skill2" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 2: "
+
+[node name="skill3" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 3:"
+
+[node name="skill4" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 4:"
+
+[node name="VSplitContainer" type="VSplitContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Container" type="Container" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Portrait" type="Sprite2D" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer/Container"]
+position = Vector2(151, 143.5)
+texture = ExtResource("3_4c782")
+
+[node name="Container2" type="Container" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Business" type="MarginContainer" parent="menu_select/Cafe/TabContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+metadata/_tab_index = 2
+
+[node name="Inventory" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Info" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Settings" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="menu_explanation" type="RichTextLabel" parent="."]
+layout_mode = 1
+offset_right = 785.0
+offset_bottom = 29.0
+theme_override_fonts/normal_font = SubResource("SystemFont_udkah")
+text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="menu_select/Expedition/doll_choose_confirmation" to="." method="_on_doll_choose_confirmation_pressed"]

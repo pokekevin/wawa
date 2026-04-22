@@ -1,0 +1,123 @@
+[gd_scene load_steps=5 format=3 uid="uid://drjepndr8068e"]
+
+[ext_resource type="Script" uid="uid://cpbq0ddwvajiw" path="res://ui/menu.gd" id="1_bwjgb"]
+[ext_resource type="Script" uid="uid://cou1s4cg35lrj" path="res://ui/doll_list.gd" id="2_udkah"]
+
+[sub_resource type="SystemFont" id="SystemFont_bwjgb"]
+font_names = PackedStringArray("Segoe UI")
+subpixel_positioning = 0
+oversampling = 2.8
+
+[sub_resource type="SystemFont" id="SystemFont_udkah"]
+font_names = PackedStringArray("Segoe UI")
+subpixel_positioning = 0
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_bwjgb")
+
+[node name="menu_select" type="TabContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = SubResource("SystemFont_bwjgb")
+tab_alignment = 2
+current_tab = 0
+
+[node name="Cafe" type="MarginContainer" parent="menu_select"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ColorRect" type="ColorRect" parent="menu_select/Cafe"]
+layout_mode = 2
+color = Color(0.238494, 0.196305, 0.232302, 1)
+
+[node name="TabContainer" type="TabContainer" parent="menu_select/Cafe"]
+layout_mode = 2
+current_tab = 1
+
+[node name="Kyuki" type="MarginContainer" parent="menu_select/Cafe/TabContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+metadata/_tab_index = 0
+
+[node name="Dolls" type="MarginContainer" parent="menu_select/Cafe/TabContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("2_udkah")
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.61
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "retard"
+
+[node name="Info" type="Container" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.18
+
+[node name="VSplitContainer" type="VSplitContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Container" type="Container" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Container2" type="Container" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Business" type="MarginContainer" parent="menu_select/Cafe/TabContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+metadata/_tab_index = 2
+
+[node name="Expedition" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Inventory" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Info" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Settings" type="MarginContainer" parent="menu_select"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="menu_explanation" type="RichTextLabel" parent="."]
+layout_mode = 1
+offset_right = 785.0
+offset_bottom = 29.0
+theme_override_fonts/normal_font = SubResource("SystemFont_udkah")
+text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DollDefault" load_steps=2 format=3 uid="uid://n07fpdomc1ep"]
+
+[ext_resource type="Script" uid="uid://bchgauy72hxqk" path="res://dolls/doll_default.gd" id="1_o1ysq"]
+
+[resource]
+script = ExtResource("1_o1ysq")
+name = "Kosellia"
+doll_trait = ""
+hiddendom = 1.0
+hiddeninf = 1.0
+hiddenres = 1.0
+hiddentem = 1.0
+hiddenpre = 1.0
+hiddenluck = 1.0
+metadata/_custom_type_script = ExtResource("1_o1ysq")

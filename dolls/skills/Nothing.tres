@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DollSkill" format=3 uid="uid://d0hcob3iyioa6"]
+
+[ext_resource type="Script" uid="uid://bplnxhcjek27" path="res://dolls/doll_skill.gd" id="1_wxwnt"]
+
+[resource]
+script = ExtResource("1_wxwnt")
+dsName = "Nothing"
+dsTier = "F"
+skill_desc = "Do nothing."
+dsType = "phys"
+dsTarget = "enemy"
+metadata/_custom_type_script = "uid://bplnxhcjek27"

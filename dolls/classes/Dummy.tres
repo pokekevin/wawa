@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DollClass" format=3 uid="uid://bptjs31megd68"]
+
+[ext_resource type="Script" uid="uid://cc4grn664qei5" path="res://dolls/doll_class.gd" id="1_fogjd"]
+[ext_resource type="Resource" uid="uid://d0hcob3iyioa6" path="res://dolls/skills/Nothing.tres" id="2_ap50a"]
+
+[resource]
+script = ExtResource("1_fogjd")
+name = "Dummy"
+family = "Wood"
+tier = "F"
+description = "A wooden dummy. A little creepy."
+skill1 = ExtResource("2_ap50a")
+skill2 = ExtResource("2_ap50a")
+skill3 = ExtResource("2_ap50a")
+skill4 = ExtResource("2_ap50a")
+metadata/_custom_type_script = "uid://cc4grn664qei5"

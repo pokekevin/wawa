@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1kavm5tdh0p8"
+path="res://.godot/imported/pump3 to the door.mp3-aa75736cb928a3c6f79ca5e526741bde.mp3str"
+
+[deps]
+
+source_file="res://sound/sfx/pump3 to the door.mp3"
+dest_files=["res://.godot/imported/pump3 to the door.mp3-aa75736cb928a3c6f79ca5e526741bde.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

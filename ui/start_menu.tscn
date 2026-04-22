@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cdu27u1x5s4rs"]
+
+[ext_resource type="Script" uid="uid://dncrof0irs6x7" path="res://ui/start_menu.gd" id="1_kw4xl"]
+[ext_resource type="Texture2D" uid="uid://1qk6vmm1jqlg" path="res://GbrTzpSbkAAMaSu.jpeg" id="2_iuit4"]
+
+[node name="start_menu" type="Control" unique_id=482016007]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kw4xl")
+
+[node name="GbrTzpSbkAaMaSu" type="Sprite2D" parent="." unique_id=1208972038]
+position = Vector2(577.0612, 324.25)
+scale = Vector2(0.60287696, 0.6051402)
+texture = ExtResource("2_iuit4")
+
+[node name="start" type="Button" parent="." unique_id=2088929281]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 17.0
+offset_right = 1136.379
+offset_bottom = 51.46869
+text = "Start"
+
+[node name="load" type="Button" parent="." unique_id=1424580327]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 61.0
+offset_right = 1136.379
+offset_bottom = 95.46869
+text = "Load"
+
+[node name="exit" type="Button" parent="." unique_id=43012392]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 106.0
+offset_right = 1136.379
+offset_bottom = 140.46869
+text = "Exit"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=531234366]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

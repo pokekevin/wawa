@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="event" format=3 uid="uid://ccsfap0085hcb"]
+
+[ext_resource type="Resource" uid="uid://fdg3mbmofhqc" path="res://enemies/enemies/duck/FacingDuck.tres" id="1_gr5ue"]
+[ext_resource type="Script" uid="uid://36325ffmp3tl" path="res://expedition/event.gd" id="2_ks5so"]
+[ext_resource type="Resource" uid="uid://c3uco3u31ny85" path="res://dialogic/timeline/expeditionstory/first_battle.dtl" id="3_8e0mq"]
+
+[resource]
+script = ExtResource("2_ks5so")
+name = "First Battle"
+type = "story"
+text = "You proceed to the next stage."
+battle = ExtResource("1_gr5ue")
+story = ExtResource("3_8e0mq")
+metadata/_custom_type_script = "uid://36325ffmp3tl"

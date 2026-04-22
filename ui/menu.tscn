@@ -1,0 +1,580 @@
+[gd_scene format=3 uid="uid://drjepndr8068e"]
+
+[ext_resource type="Script" uid="uid://cpbq0ddwvajiw" path="res://ui/menu.gd" id="1_bwjgb"]
+[ext_resource type="Script" uid="uid://cou1s4cg35lrj" path="res://ui/cafe_ui/doll_list.gd" id="2_udkah"]
+[ext_resource type="Texture2D" uid="uid://dp04xotrj2vqy" path="res://1730842473727061.jpg" id="3_4c782"]
+[ext_resource type="Script" uid="uid://bdhb84157m2r" path="res://ui/cafe_ui/item_list.gd" id="4_2ot4n"]
+[ext_resource type="Script" uid="uid://i81s4l6ne8fk" path="res://ui/settings.gd" id="5_fcydj"]
+[ext_resource type="Script" uid="uid://bcr4tk0847q74" path="res://ui/cafe_ui/equipment_list.gd" id="5_jbsda"]
+[ext_resource type="AudioStream" uid="uid://d2q7rvfig142b" path="res://sound/music/mitsukiyocandydreamy.mp3" id="8_cp6tm"]
+
+[sub_resource type="SystemFont" id="SystemFont_bwjgb"]
+font_names = PackedStringArray("Segoe UI")
+subpixel_positioning = 0
+oversampling = 2.8
+
+[sub_resource type="SystemFont" id="SystemFont_udkah"]
+font_names = PackedStringArray("Segoe UI")
+subpixel_positioning = 0
+
+[node name="menu" type="Control" unique_id=81154452]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_bwjgb")
+
+[node name="menu_select" type="TabContainer" parent="." unique_id=1481614862]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = SubResource("SystemFont_bwjgb")
+tab_alignment = 2
+current_tab = 0
+
+[node name="Expedition" type="Control" parent="menu_select" unique_id=829548892]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="battle_end_info" type="RichTextLabel" parent="menu_select/Expedition" unique_id=950410268]
+top_level = true
+layout_mode = 0
+offset_left = 323.727
+offset_top = 155.065
+offset_right = 715.727
+offset_bottom = 347.065
+text = "Battle End
+EXP: x
+Item Drops:"
+
+[node name="battle_end_info2" type="RichTextLabel" parent="menu_select/Expedition" unique_id=382821940]
+top_level = true
+layout_mode = 0
+offset_left = 777.477
+offset_top = 59.4753
+offset_right = 1114.48
+offset_bottom = 541.475
+text = "Total Drops:"
+
+[node name="doll_choose_list" type="ItemList" parent="menu_select/Expedition" unique_id=50729395]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 21.0
+offset_right = 300.0
+offset_bottom = 578.0
+select_mode = 1
+
+[node name="doll_choose_confirmation" type="Button" parent="menu_select/Expedition" unique_id=277437469]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 547.0
+offset_right = 385.0
+offset_bottom = 578.0
+text = "Confirm"
+
+[node name="WARNING" type="TextEdit" parent="menu_select/Expedition" unique_id=1722118530]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 18.0
+offset_right = 754.0
+offset_bottom = 109.0
+text = "IF YOU DO NOT INSTANCE BATTLE FIRST OR SELECT
+MORE/LESS THAN 4 YOUR GAME MAY CRASH
+YES THERE IS A WAY TO FIX IT NO I DO NOT CARE"
+
+[node name="test dialog" type="Button" parent="menu_select/Expedition" unique_id=327386895]
+layout_mode = 0
+offset_left = 956.394
+offset_top = 512.666
+offset_right = 964.394
+offset_bottom = 520.666
+text = "test dialog"
+
+[node name="Cafe" type="MarginContainer" parent="menu_select" unique_id=340820307]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ColorRect" type="ColorRect" parent="menu_select/Cafe" unique_id=2085214040]
+layout_mode = 2
+color = Color(0.238494, 0.196305, 0.232302, 1)
+
+[node name="TabContainer" type="TabContainer" parent="menu_select/Cafe" unique_id=37889570]
+layout_mode = 2
+current_tab = 1
+
+[node name="Kei" type="MarginContainer" parent="menu_select/Cafe/TabContainer" unique_id=664336309]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+metadata/_tab_index = 0
+
+[node name="Dolls" type="MarginContainer" parent="menu_select/Cafe/TabContainer" unique_id=1350888262]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("2_udkah")
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls" unique_id=736117195]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer" unique_id=1298141909]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.61
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/ScrollContainer" unique_id=1704915533]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Info" type="ReferenceRect" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer" unique_id=1714052027]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info" unique_id=1403340591]
+clip_contents = true
+layout_mode = 0
+offset_left = 31.0
+offset_top = 29.0
+offset_right = 318.0
+offset_bottom = 501.0
+
+[node name="name" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=1767624561]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Name"
+
+[node name="trait" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=745003015]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Trait: "
+
+[node name="trait_desc" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=1823666581]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="seperator" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=1264748395]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="dom" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=374127049]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Dominance:"
+
+[node name="inf" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=1231418154]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Influence: "
+
+[node name="res" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=156904970]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resolve: "
+
+[node name="tem" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=637725460]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Tempo: "
+
+[node name="pre" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=1784292861]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Precision: "
+
+[node name="affinity" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer" unique_id=2068910273]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Affinity: "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info" unique_id=1866951596]
+clip_contents = true
+layout_mode = 0
+offset_left = 334.586
+offset_top = 29.0
+offset_right = 621.586
+offset_bottom = 501.0
+
+[node name="class_name" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=935728726]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Class:"
+
+[node name="family" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=1799867807]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Family: "
+
+[node name="tier" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=210854364]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Tier: "
+
+[node name="trait" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=101411705]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Trait:
+"
+
+[node name="trait_desc" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=2070370414]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="seperator" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=1310341433]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="skill1" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=1311432539]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 1: "
+
+[node name="skill2" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=810732560]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 2: "
+
+[node name="skill3" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=604435204]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 3:"
+
+[node name="skill4" type="RichTextLabel" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/Info/VBoxContainer2" unique_id=1674375399]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Skill 4:"
+
+[node name="VSplitContainer" type="VSplitContainer" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer" unique_id=956975020]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+dragging_enabled = false
+
+[node name="Container" type="Container" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer" unique_id=578094011]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Portrait" type="Sprite2D" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer/Container" unique_id=40932422]
+position = Vector2(151, 143.5)
+texture = ExtResource("3_4c782")
+
+[node name="Container2" type="Container" parent="menu_select/Cafe/TabContainer/Dolls/HBoxContainer/VSplitContainer" unique_id=92298983]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Business" type="MarginContainer" parent="menu_select/Cafe/TabContainer" unique_id=553566501]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+metadata/_tab_index = 2
+
+[node name="Inventory" type="MarginContainer" parent="menu_select" unique_id=1516087582]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="TabContainer" type="TabContainer" parent="menu_select/Inventory" unique_id=2100090147]
+layout_mode = 2
+current_tab = 1
+
+[node name="Items" type="MarginContainer" parent="menu_select/Inventory/TabContainer" unique_id=158046175]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("4_2ot4n")
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Inventory/TabContainer/Items" unique_id=1153455646]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer" unique_id=1035337464]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/ScrollContainer" unique_id=910984041]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1468650558]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=314851657]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Info" type="ReferenceRect" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer" unique_id=2123261599]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/Info" unique_id=1471692732]
+clip_contents = true
+layout_mode = 0
+offset_left = 35.3442
+offset_top = 34.5159
+offset_right = 322.344
+offset_bottom = 506.515
+
+[node name="name" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/Info/VBoxContainer" unique_id=1976362798]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Name"
+
+[node name="type" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/Info/VBoxContainer" unique_id=820584416]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Type: "
+
+[node name="description" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/Info/VBoxContainer" unique_id=315125277]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+text = "description here
+"
+
+[node name="value" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/Info/VBoxContainer" unique_id=909124606]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Value:"
+
+[node name="amount" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/Info/VBoxContainer" unique_id=1468794857]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Currently Owned: x"
+
+[node name="VSplitContainer" type="VSplitContainer" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer" unique_id=78428556]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Container" type="Container" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer" unique_id=1455320179]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Portrait" type="Sprite2D" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/Container" unique_id=1912312885]
+position = Vector2(132.111, 148.5)
+scale = Vector2(0.777778, 0.731156)
+texture = ExtResource("3_4c782")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer" unique_id=187817931]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="add" type="Button" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=912474323]
+layout_mode = 2
+text = "Add 1"
+
+[node name="remove" type="Button" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=1468255028]
+layout_mode = 2
+text = "Remove 1"
+
+[node name="button3" type="Button" parent="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=1556511036]
+layout_mode = 2
+text = "asdf"
+
+[node name="Equipment" type="MarginContainer" parent="menu_select/Inventory/TabContainer" unique_id=953070999]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("5_jbsda")
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Inventory/TabContainer/Equipment" unique_id=1452187641]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer" unique_id=471998514]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.61
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/ScrollContainer" unique_id=1702127644]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1675575699]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Info" type="ReferenceRect" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer" unique_id=47794388]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info" unique_id=772043883]
+clip_contents = true
+layout_mode = 0
+offset_left = 35.3442
+offset_top = 34.5159
+offset_right = 322.344
+offset_bottom = 506.515
+
+[node name="name" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer" unique_id=2001469292]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Name"
+
+[node name="type" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer" unique_id=1281209386]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Type: "
+
+[node name="description" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer" unique_id=1663284028]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+text = "description here
+"
+
+[node name="wAD" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer" unique_id=956752587]
+layout_mode = 2
+size_flags_vertical = 3
+text = "wAD: "
+
+[node name="rank" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer" unique_id=1004008709]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Rank: "
+
+[node name="affix0" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer" unique_id=1926013885]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Rank: "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info" unique_id=555924128]
+clip_contents = true
+layout_mode = 0
+offset_left = 341.427
+offset_top = 34.7753
+offset_right = 628.427
+offset_bottom = 506.774
+
+[node name="affix1" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer2" unique_id=1399530388]
+layout_mode = 2
+size_flags_vertical = 3
+text = "affix1: "
+
+[node name="affix2" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer2" unique_id=810438521]
+layout_mode = 2
+size_flags_vertical = 3
+text = "affix2"
+
+[node name="affix3" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer2" unique_id=1383318811]
+layout_mode = 2
+size_flags_vertical = 3
+text = "affix2: "
+
+[node name="affix4" type="RichTextLabel" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/Info/VBoxContainer2" unique_id=251289792]
+layout_mode = 2
+size_flags_vertical = 3
+text = "affix4: "
+
+[node name="VSplitContainer" type="VSplitContainer" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer" unique_id=1618883001]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+dragging_enabled = false
+
+[node name="Container" type="Container" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer" unique_id=626974179]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Portrait" type="Sprite2D" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/Container" unique_id=1139467155]
+position = Vector2(132.111, 148.5)
+scale = Vector2(0.777778, 0.731156)
+texture = ExtResource("3_4c782")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer" unique_id=319705104]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="affix1" type="OptionButton" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=1109002609]
+layout_mode = 2
+allow_reselect = true
+
+[node name="affix2" type="OptionButton" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=1801940617]
+layout_mode = 2
+allow_reselect = true
+
+[node name="affix3" type="OptionButton" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=1190661323]
+layout_mode = 2
+allow_reselect = true
+
+[node name="affix4" type="OptionButton" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=681130630]
+layout_mode = 2
+allow_reselect = true
+
+[node name="confirm" type="Button" parent="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer" unique_id=1705737753]
+layout_mode = 2
+text = "Confirm"
+
+[node name="Notebook" type="MarginContainer" parent="menu_select" unique_id=2072204930]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Settings" type="MarginContainer" parent="menu_select" unique_id=1168349173]
+visible = false
+layout_mode = 2
+script = ExtResource("5_fcydj")
+metadata/_tab_index = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_select/Settings" unique_id=354787950]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_select/Settings/HBoxContainer" unique_id=2107036680]
+layout_mode = 2
+
+[node name="save" type="Button" parent="menu_select/Settings/HBoxContainer/VBoxContainer" unique_id=1369685295]
+layout_mode = 2
+text = "Save"
+
+[node name="load" type="Button" parent="menu_select/Settings/HBoxContainer/VBoxContainer" unique_id=1803998044]
+layout_mode = 2
+text = "Load"
+
+[node name="exit" type="Button" parent="menu_select/Settings/HBoxContainer/VBoxContainer" unique_id=746695452]
+layout_mode = 2
+text = "                  Exit                   "
+
+[node name="menu_explanation" type="RichTextLabel" parent="." unique_id=400848736]
+layout_mode = 1
+offset_right = 738.0
+offset_bottom = 29.0
+theme_override_fonts/normal_font = SubResource("SystemFont_udkah")
+text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="jukebox" type="AudioStreamPlayer2D" parent="." unique_id=876282989]
+stream = ExtResource("8_cp6tm")
+parameters/looping = true
+
+[connection signal="pressed" from="menu_select/Expedition/doll_choose_confirmation" to="." method="_on_doll_choose_confirmation_pressed"]
+[connection signal="pressed" from="menu_select/Expedition/test dialog" to="." method="_on_test_dialog_pressed"]
+[connection signal="pressed" from="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer/add" to="menu_select/Inventory/TabContainer/Items" method="_on_add_pressed"]
+[connection signal="pressed" from="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer/remove" to="menu_select/Inventory/TabContainer/Items" method="_on_remove_pressed"]
+[connection signal="item_selected" from="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer/affix1" to="menu_select/Inventory/TabContainer/Equipment" method="_on_affix_1_item_selected"]
+[connection signal="item_selected" from="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer/affix2" to="menu_select/Inventory/TabContainer/Equipment" method="_on_affix_2_item_selected"]
+[connection signal="item_selected" from="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer/affix3" to="menu_select/Inventory/TabContainer/Equipment" method="_on_affix_3_item_selected"]
+[connection signal="item_selected" from="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer/affix4" to="menu_select/Inventory/TabContainer/Equipment" method="_on_affix_4_item_selected"]
+[connection signal="pressed" from="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer/confirm" to="menu_select/Inventory/TabContainer/Equipment" method="_on_confirm_pressed"]
+[connection signal="pressed" from="menu_select/Settings/HBoxContainer/VBoxContainer/save" to="menu_select/Settings" method="_on_save_pressed"]
+[connection signal="pressed" from="menu_select/Settings/HBoxContainer/VBoxContainer/load" to="menu_select/Settings" method="_on_load_pressed"]
+[connection signal="pressed" from="menu_select/Settings/HBoxContainer/VBoxContainer/exit" to="menu_select/Settings" method="_on_exit_pressed"]

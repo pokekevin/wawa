@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://x4nvm5xla7ve"]
+
+[ext_resource type="Script" uid="uid://b2co1iiexdqmi" path="res://ui/map.gd" id="1_4xfga"]
+
+[node name="map" type="Control" unique_id=1823035129]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_4xfga")
+
+[node name="stage_number" type="RichTextLabel" parent="." unique_id=1123950286]
+layout_mode = 0
+offset_left = 931.0
+offset_top = 84.0
+offset_right = 1083.0
+offset_bottom = 121.0
+text = "Current Stage: 0-0"
+
+[node name="entrance" type="RichTextLabel" parent="." unique_id=1156378005]
+layout_mode = 0
+offset_left = 932.0
+offset_top = 32.0
+offset_right = 1146.0
+offset_bottom = 80.0
+text = "Entrance: Viridian Forest"
+
+[node name="choice_container" type="VBoxContainer" parent="." unique_id=582891958]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 486.0
+offset_right = 325.0
+offset_bottom = 626.0
+
+[node name="proceed" type="Button" parent="choice_container" unique_id=1509074528]
+layout_mode = 2
+text = "Proceed"
+
+[node name="convene" type="Button" parent="choice_container" unique_id=1079950376]
+layout_mode = 2
+text = "Convene"
+
+[node name="rest" type="Button" parent="choice_container" unique_id=2064678767]
+layout_mode = 2
+text = "Rest"
+
+[node name="hibernate" type="Button" parent="choice_container" unique_id=1784682370]
+layout_mode = 2
+text = "Hibernate
+"

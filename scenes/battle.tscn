@@ -1,0 +1,281 @@
+[gd_scene format=3 uid="uid://cylo05yed47ko"]
+
+[ext_resource type="Script" uid="uid://hn86g32jpioc" path="res://scenes/battle.gd" id="1_dn72j"]
+[ext_resource type="Texture2D" uid="uid://dp04xotrj2vqy" path="res://1730842473727061.jpg" id="2_lpir7"]
+[ext_resource type="Texture2D" uid="uid://6nlybxcesu2e" path="res://icon.svg" id="2_p1qf1"]
+[ext_resource type="Script" uid="uid://c6v611eyyo3mt" path="res://scenes/battle_doll_1.gd" id="3_a12nh"]
+[ext_resource type="PackedScene" uid="uid://d1r4romxlnc6o" path="res://scenes/enemy_button.tscn" id="4_a12nh"]
+
+[node name="battle" type="Control" unique_id=1672417255]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dn72j")
+
+[node name="background" type="ColorRect" parent="." unique_id=163689651]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0846899, 0.0846899, 0.0846899, 1)
+
+[node name="dollselect" type="MarginContainer" parent="." unique_id=24384649]
+layout_mode = 0
+offset_left = 2.36363
+offset_top = 511.182
+offset_right = 321.364
+offset_bottom = 649.182
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="NinePatchRect" parent="dollselect" unique_id=173048572]
+layout_mode = 2
+texture = ExtResource("2_lpir7")
+
+[node name="MarginContainer" type="MarginContainer" parent="dollselect/GridContainer" unique_id=1443941390]
+layout_mode = 0
+offset_left = -2.18183
+offset_top = -2.72729
+offset_right = 316.818
+offset_bottom = 135.273
+
+[node name="VBoxContainer" type="VBoxContainer" parent="dollselect/GridContainer/MarginContainer" unique_id=1077605148]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="dollselect/GridContainer/MarginContainer/VBoxContainer" unique_id=659188107]
+layout_mode = 2
+text = "Save"
+
+[node name="Button3" type="Button" parent="dollselect/GridContainer/MarginContainer/VBoxContainer" unique_id=944507089]
+layout_mode = 2
+text = "Load"
+
+[node name="Button2" type="Button" parent="dollselect/GridContainer/MarginContainer/VBoxContainer" unique_id=1398765942]
+layout_mode = 2
+text = "sneed"
+
+[node name="Button" type="Button" parent="dollselect/GridContainer/MarginContainer/VBoxContainer" unique_id=818777005]
+layout_mode = 2
+text = "sneed"
+
+[node name="moveselect" type="MarginContainer" parent="." unique_id=1477880685]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 491.0
+offset_right = 1149.0
+offset_bottom = 646.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="NinePatchRect" parent="moveselect" unique_id=1902721166]
+layout_mode = 2
+texture = ExtResource("2_lpir7")
+
+[node name="Button" type="Button" parent="moveselect/GridContainer" unique_id=201091918]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 12.0
+offset_right = 275.0
+offset_bottom = 46.0
+
+[node name="Button2" type="Button" parent="moveselect/GridContainer" unique_id=875159586]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 61.0
+offset_right = 175.0
+offset_bottom = 95.0
+
+[node name="Button3" type="Button" parent="moveselect/GridContainer" unique_id=815457059]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 59.0
+offset_right = 376.0
+offset_bottom = 93.0
+
+[node name="Button4" type="Button" parent="moveselect/GridContainer" unique_id=712572177]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 109.0
+offset_right = 275.0
+offset_bottom = 143.0
+
+[node name="doll1" type="TextureButton" parent="." unique_id=1014016753]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 40.0
+offset_right = 361.0
+offset_bottom = 168.0
+texture_normal = ExtResource("2_p1qf1")
+script = ExtResource("3_a12nh")
+
+[node name="move_queued" type="RichTextLabel" parent="doll1" unique_id=765637031]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 77.0
+offset_right = 350.0
+offset_bottom = 108.0
+text = "none
+"
+
+[node name="hp" type="RichTextLabel" parent="doll1" unique_id=1651518798]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 10.0
+offset_right = 352.0
+offset_bottom = 41.0
+text = "hp"
+
+[node name="loss" type="RichTextLabel" parent="doll1" unique_id=1844953805]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 46.0
+offset_right = 351.0
+offset_bottom = 77.0
+text = "loss"
+
+[node name="doll2" type="TextureButton" parent="." unique_id=1705967042]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 178.0
+offset_right = 192.0
+offset_bottom = 306.0
+texture_normal = ExtResource("2_p1qf1")
+script = ExtResource("3_a12nh")
+
+[node name="move_queued" type="RichTextLabel" parent="doll2" unique_id=1384696653]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 197.0
+offset_right = 155.0
+offset_bottom = 228.0
+text = "none
+"
+
+[node name="hp" type="RichTextLabel" parent="doll2" unique_id=347049662]
+layout_mode = 0
+offset_left = -53.0
+offset_top = 130.0
+offset_right = 157.0
+offset_bottom = 161.0
+text = "hp"
+
+[node name="loss" type="RichTextLabel" parent="doll2" unique_id=1120444280]
+layout_mode = 0
+offset_left = -54.0
+offset_top = 166.0
+offset_right = 156.0
+offset_bottom = 197.0
+text = "loss"
+
+[node name="doll3" type="TextureButton" parent="." unique_id=2010685115]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 184.0
+offset_right = 553.0
+offset_bottom = 312.0
+texture_normal = ExtResource("2_p1qf1")
+script = ExtResource("3_a12nh")
+
+[node name="move_queued" type="RichTextLabel" parent="doll3" unique_id=1184115045]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 77.0
+offset_right = 350.0
+offset_bottom = 108.0
+text = "none
+"
+
+[node name="hp" type="RichTextLabel" parent="doll3" unique_id=1200476136]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 10.0
+offset_right = 352.0
+offset_bottom = 41.0
+text = "hp"
+
+[node name="loss" type="RichTextLabel" parent="doll3" unique_id=650477885]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 46.0
+offset_right = 351.0
+offset_bottom = 77.0
+text = "loss"
+
+[node name="doll4" type="TextureButton" parent="." unique_id=2026965764]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 337.0
+offset_right = 358.0
+offset_bottom = 465.0
+texture_normal = ExtResource("2_p1qf1")
+script = ExtResource("3_a12nh")
+
+[node name="move_queued" type="RichTextLabel" parent="doll4" unique_id=1716219196]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 77.0
+offset_right = 350.0
+offset_bottom = 108.0
+text = "none
+"
+
+[node name="hp" type="RichTextLabel" parent="doll4" unique_id=1927958818]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 10.0
+offset_right = 352.0
+offset_bottom = 41.0
+text = "hp"
+
+[node name="loss" type="RichTextLabel" parent="doll4" unique_id=843671112]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 46.0
+offset_right = 351.0
+offset_bottom = 77.0
+text = "loss"
+
+[node name="enemy" parent="." unique_id=89950408 instance=ExtResource("4_a12nh")]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 179.0
+offset_right = 918.0
+offset_bottom = 307.0
+
+[node name="move_queued" type="RichTextLabel" parent="enemy" unique_id=1692005504]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 77.0
+offset_right = 350.0
+offset_bottom = 108.0
+text = "none
+"
+
+[node name="hp" type="RichTextLabel" parent="enemy" unique_id=1240883753]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 10.0
+offset_right = 352.0
+offset_bottom = 41.0
+text = "hp"
+
+[node name="loss" type="RichTextLabel" parent="enemy" unique_id=461090765]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 46.0
+offset_right = 351.0
+offset_bottom = 77.0
+text = "loss"
+
+[node name="energy_display" type="RichTextLabel" parent="." unique_id=823761935]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 7.0
+offset_right = 749.0
+offset_bottom = 43.0
+text = "energy"

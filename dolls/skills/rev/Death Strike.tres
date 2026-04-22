@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DollSkill" format=3 uid="uid://dee6rm2tvf70e"]
+
+[ext_resource type="Script" uid="uid://bplnxhcjek27" path="res://dolls/doll_skill.gd" id="1_2e454"]
+
+[resource]
+script = ExtResource("1_2e454")
+dsName = "Death Strike"
+dsTier = "F"
+dsAD = 10.0
+skill_desc = "basic ass strike. type shit"
+dsType = "phys"
+dsTarget = "enemy"
+dsADM = 1.0
+dsLoss = 20.0
+dsCost = 10.0
+dsCritChance = 10.0
+metadata/_custom_type_script = "uid://bplnxhcjek27"

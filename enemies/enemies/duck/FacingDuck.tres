@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EnemyDefault" format=3 uid="uid://fdg3mbmofhqc"]
+
+[ext_resource type="Resource" uid="uid://bhn28xe3hedey" path="res://enemies/skills/Beak Blast.tres" id="1_eduws"]
+[ext_resource type="Script" uid="uid://ddbwgeg0xuqhv" path="res://enemies/enemy_default.gd" id="1_euni0"]
+[ext_resource type="Resource" uid="uid://br6rn6jcek1tu" path="res://enemies/drops/FacingDuckDrop.tres" id="2_7ty5w"]
+[ext_resource type="Texture2D" uid="uid://d01gvlatgoexb" path="res://enemies/enemies/duck/facingduck1.png" id="3_yf277"]
+
+[resource]
+script = ExtResource("1_euni0")
+name = "Facing Duck"
+image = ExtResource("3_yf277")
+drop_table = ExtResource("2_7ty5w")
+xp = 10.0
+MHP = 10.0
+Def = 10.0
+GDR = 5.0
+PDR = 10.0
+MDR = 10.0
+MStagger = 10.0
+Skill1 = ExtResource("1_eduws")
+Skill2 = ExtResource("1_eduws")
+Skill3 = ExtResource("1_eduws")
+Skill4 = ExtResource("1_eduws")
+Skill5 = ExtResource("1_eduws")
+Skill6 = ExtResource("1_eduws")
+Skill7 = ExtResource("1_eduws")
+Skill8 = ExtResource("1_eduws")
+SkillUlt = ExtResource("1_eduws")
+metadata/_custom_type_script = "uid://ddbwgeg0xuqhv"

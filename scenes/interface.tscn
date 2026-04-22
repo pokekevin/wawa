@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bkrekcvnc807d"]
+
+[ext_resource type="Script" uid="uid://2s08m0gpgtd6" path="res://ui/interface.gd" id="1_s0di0"]
+[ext_resource type="Script" uid="uid://crwqxucg50qdl" path="res://ui/save_load.gd" id="2_s0di0"]
+[ext_resource type="PackedScene" uid="uid://drjepndr8068e" path="res://ui/menu.tscn" id="2_vceqh"]
+[ext_resource type="Script" uid="uid://sjrfjctm6mse" path="res://party/party.gd" id="7_5tchh"]
+[ext_resource type="Script" uid="uid://dyorcyqk6uc8s" path="res://party/inventory.gd" id="8_5tchh"]
+[ext_resource type="Script" uid="uid://bhcgo36vj47dn" path="res://item/affix_list.gd" id="8_rlv52"]
+[ext_resource type="Script" uid="uid://cb11xjgii1afe" path="res://ui/signal_bus.gd" id="8_t62tn"]
+[ext_resource type="PackedScene" uid="uid://cdu27u1x5s4rs" path="res://ui/start_menu.tscn" id="11_rlv52"]
+
+[node name="interface" type="Control" unique_id=221277903]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s0di0")
+
+[node name="start_menu" parent="." unique_id=482016007 instance=ExtResource("11_rlv52")]
+visible = false
+layout_mode = 0
+
+[node name="menu" parent="." unique_id=2029417833 instance=ExtResource("2_vceqh")]
+unique_name_in_owner = true
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="utilities" type="Node" parent="." unique_id=1557952399]
+
+[node name="party" type="Node" parent="." unique_id=169780691]
+unique_name_in_owner = true
+script = ExtResource("7_5tchh")
+
+[node name="inventory" type="Node" parent="party" unique_id=998124678]
+script = ExtResource("8_5tchh")
+
+[node name="affix_list" type="Node" parent="party" unique_id=1834840834]
+script = ExtResource("8_rlv52")
+
+[node name="saveloader" type="Node" parent="." unique_id=735389893]
+script = ExtResource("2_s0di0")
+
+[node name="signal_bus" type="Node" parent="." unique_id=1289008470]
+script = ExtResource("8_t62tn")

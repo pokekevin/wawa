@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemySkill" load_steps=2 format=3 uid="uid://bhn28xe3hedey"]
+
+[ext_resource type="Script" uid="uid://csk1c37bgvpkc" path="res://enemies/enemy_skill.gd" id="1_judrs"]
+
+[resource]
+script = ExtResource("1_judrs")
+esName = "Beak Blast"
+esDamage = 20.0
+esEffect = "none"
+esEffectValue = 0.0
+esLoss = 24.0
+esTargeting1 = false
+esTargeting2 = false
+esTargeting3 = true
+esTargeting4 = false
+metadata/_custom_type_script = ExtResource("1_judrs")

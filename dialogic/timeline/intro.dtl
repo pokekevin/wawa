@@ -1,0 +1,124 @@
+[style name="style"]
+setting "text_speed" = 0.0
+fey: ...Anyways, that's the situation.
+fey: I'm out of money.
+fey: You two are going to need to find a job.
+It was quite the predicament I had found myself in, on that rainy afternoon.
+My sister and I were lazing around at home. I was perusing the contents of a magazine and Kyuki reclined herself halfway across a bean bag couch. She was as asleep as she could possibly be, vacantly staring at the logs that made up the ceiling of our home.
+It was then that our aunt walked in, and said that word.
+"Job."
+Yes, that one. I couldn't believe my ears.
+kyuki: ...
+Before I knew it, blood had started to leak out of my sister's mouth. And quite a lot of it at that.
+fey: What the hell?!
+kei: Auntie. Please. Don't say such things in front of sister dearest. You know how she gets around that word.
+kyuki: I'm fine. Don't worry about me.
+fey: You started throwing up blood! There's no way you're fine!
+kyuki: It's alright, Auntie. We understand what you're trying to say.
+kyuki: Indeed.
+fey: What?
+kyuki: You don't love me anymore, right? You're abandoning me.
+kyuki: It makes sense. I spend every waking second in my room, eating chips, drinking cola.
+kyuki: I'm ugly. I smell bad. I don't shower. Even worse, I ate your pudding from the fridge yesterday without asking.
+kyuki: I might as well die.
+kei: Oh, I see. I wait tables at the cafe from time to time, so I can stay, right?
+fey: What are you talking about? Stop joking around. I'm serious.
+fey: I'm broke. We're completely out of money.
+fey: Truth be told, with how poor business has been in the past few months and the fact that I've had three mouths to feed, I'm shocked my savings even lasted this long.
+fey: But last night, the final due date for those loans I took out for the remodeling finally came.
+fey: I managed to convince our debtor to forgive a quarter of the loan but the remainder of the loan drained our savings completely.
+fey: I'm out of money.
+kyuki: N-no way... Are we going to have to move back with mom? After all that bragging you did?
+fey: It's fine! As long as you two manage to bring in some money starting now, we'll stay afloat.
+kei: ...Hey, hang on. That story doesn't add up. We made enough revenue last quarter to pay off at least 4/5ths of the balance.
+kei: Where's the rest?
+fey: H-huh?
+kei: I did the accounting myself. Our seasonal revenue was 16,495 gold. We loaned a principal of 10,000 gold at a 5% rate, which would've racked up 122 gold in interest over the course of the last three months.
+kei: Our business expenditures this quarter totaled only 6438 gold. The three of us haven't made a single purchase in the past three months outside of food and other necessities.
+kei: Where's the rest of the money?
+fey: ...
+kei: You gambled it away, didn't you?
+fey: ...
+fey: ...Tch.
+She looked away from us.
+fey: What does that matter to you?! It's my money! I can do whatever I want with it!
+kyuki: Wow. Instantly busted.
+kei: We were doing fine last week, weren't we? How did you even manage to lose a grand in a week?
+kyuki: Wait, we made seventeen thousand gold this year?
+kyuki: How? Doesn't Auntie sell like six cakes a day?
+kyuki: To be honest, I thought we were drowning in debt... I was readying myself to sell one of Kei's kidney's soon...
+kei: Half of it came from mom.
+kyuki: Oh. Makes sense.
+kyuki: So you were blowing away our child support money on Mahjong, huh?
+fey: Shut up! That's not true! And it's not like it's your money anyways! You two haven't done anything!
+fey: All you do is laze around! And sleep! And read magazines!
+fey: You two need to clean up after yourselves! What are you going to do when I die, huh?!
+fey: Who's going to cook for you?! Who's going to wash your clothes?! Who's going to pay the rent?!
+fey: You two need to get a job! Now!!!
+kei: Hang on, you can't expect us to just instantly get a job. We don't have any qualifications or marketable skills.
+kei: Even adventuring requires a license from the Guild which would take at least a week to process.
+fey: That won't be a problem. I've already registered the two of you.
+kei: Huh? When?
+fey: Ages ago. Also, you're both my collateral for the rest of the debt. I made a deal with the guy that you'd mentor his daughter next week and I told him you two reached the sixth floor on your own.
+kei: You registered us without telling us? And wait...
+kei: The sixth floor?! You insane hag, do you know how hard that is?!  It's not even legal for F-Rankers to enter the sixth floor! Solo delvers are supposed to have years of experience!
+kei: And you lied to the Dragons? Do you want to get us killed?! What if they find out?!
+fey: Blah blah, I don't want to hear it. You're smart, you'll figure it out. And Kei's a Doll, so she's already at an advantage.
+kei: That doesn't solve anything!
+fey: You'll be fine. Here, I even bought you a sword to celebrate the occasion.
+fey: Don't come back home until you're level 2!
+audio "res://sound/sfx/pump3 to the door.mp3" [volume="0.0"]
+[wait time="2.0"]
+[background fade="0.0"]
+kei: ...This game doesn't even have levels!
+kyuki: She really kicked us out. Maybe she does hate us.
+She threw us out on to the street and closed the door behind us. Auntie must've been feeling extra generous, because she also handed us a duffel bag with enough rations for a few days and a little bit of pocket money.
+kyuki: Well, it was a good run. I'm gonna go back to Vermillion and live with mom.
+kei: Hold it.
+I grabbed her by the cuff as she started to walk away.
+kei: You wouldn't be able to find her if you tried. There's no guarantee she's even in Vermillion anymore.
+kyuki: Can't I just go back to our old house and live there, then?
+kei: That place was raided by the VDA years ago. Forget living there, you'd be arrested on sight for even entering the premises.
+kyuki: ...
+kyuki: Ha...
+kyuki: So it's come down to this...
+kyuki: We're done for, Kei. Let's just get this over with and kill ourselves.
+kei: You're overexaggerating. Let's just go to the guild and collect our licenses.
+[wait time="1.0"]
+[background fade="0.0"]
+[wait time="1.0"]
+tina: ...And so, the two of you will have to start as F-Ranks. Your registration has been pre-approved, so if you want, you can start immediately.
+tina: I would advise at least reading over the manual beforehand though. It's not common, but beginners do sometimes recieve permanent injuries or even die on the fifth floor.
+kei: What are the requirements for us to travel to the sixth?
+tina: You'll need to be an E-Rank adventurer at the minimum accompanying a D-Rank or above. Only D-Ranks and above are qualified to venture down to the sixth floor alone.
+tina: Do you have an item you need from the floor? I can submit a retrieval request for you if you'd like.
+kei: No thanks.
+tina: It's telling me that you two don't belong to a Company yet. Would you like me to register a Company for you?
+kei: Please, if possible.
+tina: Do have a name in mind?
+kei: Fey's Ca-
+kyuki: Kyuki and Friends! Kyuki and Friends! Kyuki and Friends!
+tina: Kyuki and Friends. You will be registered under the Open Forest. If you would like to transfer Unions, you can carry over any Company records and ranking progress.
+tina: Please call for me the next time you visit this branch of the Guild. I would suggest doing a joint expedition with a more experienced Company first before heading to the fifth floor. I wish you luck in your adventures.
+She handed us our licenses.
+We left the mostly empty building.
+[wait time="1.0"]
+[background fade="0.0"]
+[wait time="1.0"]
+kei: "Kyuki and Friends".
+kyuki: Quite the choice, I must say myself.
+kei: We had one chance to name the Company and you settled on "Kyuki and Friends".
+kei: ...
+kei: Whatever. Let's get going. We should earn enough for dinner or else Fey's probably not going to let us back home.
+kyuki: Hang on, didn't you hear the receptionist tell us like four times that we shouldn't go in alone?
+kei: It's fine. Auntie was actually right, if I had to guess you should be able to get to the sixth floor in a week.
+kei: Inexperienced Dolls should be able to operate significantly better than inexperienced humans in places with high mana desnity. By default, you should already be on the level of an E-Rank adventurer even with no prior combat experience.
+kei: Even then, it'd be difficult, but the act of getting to the sixth floor itself isn't as hard as it sounds.
+kei: The expectation is that you'd be able to defeat a Guardian Monster but the sixth floor has several entrances that aren't guarded by Guardians. As long as we can find an entrance like that we'll be fine.
+kei: So for now, we should just focus on mapping out the area. There's still around three weeks or so before the areas begin to scramble.
+kei: There's an entrance down to the fifth floor about ten minutes from here.
+kei: We can leave now while it's still bright outside.
+kyuki: Wow... you put a lot more thought into this than I was expecting.
+kei: ...
+Is she making fun of me?
+[signal arg="sneed"]

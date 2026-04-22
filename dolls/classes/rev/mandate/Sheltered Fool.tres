@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DollClass" format=3 uid="uid://dsiv8panvrps8"]
+
+[ext_resource type="Script" uid="uid://cc4grn664qei5" path="res://dolls/doll_class.gd" id="1_kn7hk"]
+[ext_resource type="Resource" uid="uid://dhttqm7a4c56d" path="res://dolls/skills/rev/Death Heal.tres" id="2_vbwpa"]
+[ext_resource type="Resource" uid="uid://blemg1p5e575l" path="res://dolls/skills/rev/Death Shield.tres" id="3_rbg7w"]
+[ext_resource type="Resource" uid="uid://dee6rm2tvf70e" path="res://dolls/skills/rev/Death Strike.tres" id="4_svp7g"]
+[ext_resource type="Resource" uid="uid://bcy45ase5r661" path="res://dolls/skills/rev/Old Reliable.tres" id="5_h0k5x"]
+
+[resource]
+script = ExtResource("1_kn7hk")
+name = "Sheltered Fool"
+family = "Mandate"
+tier = "F"
+description = "The rain stops short of downpour. The man walks in with not a shred of guilt or hesitation. He envelops himself in an empty throne."
+dcTrait = "Duke"
+class_trait_desc = "Gain 0.25 Influence at the start of every note."
+skill1 = ExtResource("2_vbwpa")
+skill2 = ExtResource("3_rbg7w")
+skill3 = ExtResource("4_svp7g")
+skill4 = ExtResource("5_h0k5x")
+metadata/_custom_type_script = "uid://cc4grn664qei5"

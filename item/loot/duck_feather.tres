@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://brnwa2fb6pfob"]
+
+[ext_resource type="Script" uid="uid://b8c4sw7u7qoba" path="res://item/item_class.gd" id="1_up7ed"]
+
+[resource]
+script = ExtResource("1_up7ed")
+address = "res://item/loot/duck_feather.tres"
+name = "Duck Feather"
+type = "Loot"
+description = "Feathers from a facing duck."
+value = 10.0
+rank = ""
+metadata/_custom_type_script = ExtResource("1_up7ed")

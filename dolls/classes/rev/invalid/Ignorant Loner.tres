@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DollClass" format=3 uid="uid://bxf5l4mrr7jk4"]
+
+[ext_resource type="Script" uid="uid://cc4grn664qei5" path="res://dolls/doll_class.gd" id="1_gax8u"]
+[ext_resource type="Resource" uid="uid://dee6rm2tvf70e" path="res://dolls/skills/rev/Death Strike.tres" id="2_ppg70"]
+[ext_resource type="Resource" uid="uid://bcy45ase5r661" path="res://dolls/skills/rev/Old Reliable.tres" id="3_yhajn"]
+[ext_resource type="Resource" uid="uid://dhttqm7a4c56d" path="res://dolls/skills/rev/Death Heal.tres" id="4_nwkxe"]
+[ext_resource type="Resource" uid="uid://blemg1p5e575l" path="res://dolls/skills/rev/Death Shield.tres" id="5_wgb6a"]
+
+[resource]
+script = ExtResource("1_gax8u")
+name = "Ignorant Loner"
+family = "Invalid"
+tier = "F"
+description = "Overgrown steps and tender stares, a velvet mist lights the skyline with a neon palette, slipping into streets of ash. This is the impasse, the end, the beginning."
+dcTrait = "Pacemaker"
+class_trait_desc = "Gain 0.25 Tempo at the start of every note."
+skill1 = ExtResource("2_ppg70")
+skill2 = ExtResource("3_yhajn")
+skill3 = ExtResource("4_nwkxe")
+skill4 = ExtResource("5_wgb6a")
+metadata/_custom_type_script = "uid://cc4grn664qei5"

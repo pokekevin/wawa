@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DollDefault" load_steps=2 format=3 uid="uid://d3ya1mxxoiuk5"]
+
+[ext_resource type="Script" uid="uid://bchgauy72hxqk" path="res://dolls/doll_default.gd" id="1_2cqr1"]
+
+[resource]
+script = ExtResource("1_2cqr1")
+name = "Kyuki"
+diTrait = "Heroine"
+doll_trait_desc = "gay niger syndome adsdsad sads d asda sa sd sad adsds a ads dasasd gay niger syndome adsdsad sads d asda sa sd sad adsds a ads dasasd  gay niger syndome adsdsad sads d asda sa sd sad adsds a ads dasasd asdplmdsajpo asdjopds akopd as ksado paodsj asdpio adsjp dasjop dasjop adjspo asdjpoa sdjpoa sdjop asdjpoad sjpoa sdjop adsjopasd ojp sdajopdas jpoas djop[ ads"
+hiddendom = 1.0
+hiddeninf = 1.0
+hiddenres = 1.0
+hiddentem = 1.0
+hiddenpre = 1.0
+hiddenluck = 1.0
+metadata/_custom_type_script = ExtResource("1_2cqr1")

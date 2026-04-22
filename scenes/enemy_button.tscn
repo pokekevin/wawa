@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1r4romxlnc6o"]
+
+[ext_resource type="Texture2D" uid="uid://6nlybxcesu2e" path="res://icon.svg" id="1_0neql"]
+[ext_resource type="Script" uid="uid://b1ese67whcs3m" path="res://scenes/enemy_button.gd" id="2_l0du3"]
+
+[node name="enemy_button" type="TextureButton"]
+texture_normal = ExtResource("1_0neql")
+script = ExtResource("2_l0du3")

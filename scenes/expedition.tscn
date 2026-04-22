@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://w16ucl7575l3"]
+
+[ext_resource type="Script" uid="uid://f7iiyd025w1n" path="res://ui/expedition.gd" id="1_0gx25"]
+[ext_resource type="AudioStream" uid="uid://cjt3uqyyfcpul" path="res://sound/sfx/Rappa Fanfare.mp3" id="4_0gx25"]
+[ext_resource type="Script" uid="uid://3twd8fi5ajr1" path="res://scenes/expedition_party.gd" id="4_t2lyr"]
+
+[node name="expedition" type="Control" unique_id=970586068]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0gx25")
+
+[node name="expedition_party" type="Node" parent="." unique_id=113588865]
+script = ExtResource("4_t2lyr")
+
+[node name="expedition_ui" type="Control" parent="." unique_id=1391054514]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="stage_number" type="RichTextLabel" parent="expedition_ui" unique_id=642489203]
+layout_mode = 0
+offset_left = 931.0
+offset_top = 84.0
+offset_right = 1083.0
+offset_bottom = 121.0
+text = "Current Stage: 0"
+
+[node name="entrance" type="RichTextLabel" parent="expedition_ui" unique_id=299756067]
+layout_mode = 0
+offset_left = 932.0
+offset_top = 32.0
+offset_right = 1146.0
+offset_bottom = 80.0
+text = "Entrance: 5-1, Viridian Forest"
+
+[node name="choice_container" type="VBoxContainer" parent="expedition_ui" unique_id=530148272]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 486.0
+offset_right = 325.0
+offset_bottom = 626.0
+
+[node name="proceed" type="Button" parent="expedition_ui/choice_container" unique_id=1378520014]
+layout_mode = 2
+text = "Proceed"
+
+[node name="convene" type="Button" parent="expedition_ui/choice_container" unique_id=1045528646]
+layout_mode = 2
+text = "Convene"
+
+[node name="rest" type="Button" parent="expedition_ui/choice_container" unique_id=478183560]
+layout_mode = 2
+text = "Rest"
+
+[node name="hibernate" type="Button" parent="expedition_ui/choice_container" unique_id=1609430158]
+layout_mode = 2
+text = "Hibernate
+"
+
+[node name="expedition_end_screen" type="Control" parent="." unique_id=206707645]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="congratulations" type="RichTextLabel" parent="expedition_end_screen" unique_id=947609947]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 164.0
+offset_right = 665.0
+offset_bottom = 196.0
+text = "Expedition Victory!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="expedition_end_screen" unique_id=1714043758]
+stream = ExtResource("4_0gx25")
+
+[node name="loot" type="RichTextLabel" parent="expedition_end_screen" unique_id=346782879]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 281.0
+offset_right = 747.0
+offset_bottom = 596.0
+text = "Loot:"
+
+[node name="xp" type="RichTextLabel" parent="expedition_end_screen" unique_id=1953386247]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 236.0
+offset_right = 706.0
+offset_bottom = 281.0
+text = "XP: "
+
+[node name="end_expedition" type="Button" parent="expedition_end_screen" unique_id=839851283]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 586.0
+offset_right = 1129.0
+offset_bottom = 619.0
+text = "End Expedition"
+
+[connection signal="pressed" from="expedition_ui/choice_container/proceed" to="." method="_on_proceed_pressed"]
+[connection signal="pressed" from="expedition_end_screen/end_expedition" to="." method="_on_end_expedition_pressed"]

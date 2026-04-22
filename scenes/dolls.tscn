@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0sj32tfgjbsj"]
+
+[ext_resource type="Script" uid="uid://6v5r26mn8hx5" path="res://dolls/dolls/kyuki/kyuki.gd" id="1_axm2f"]
+[ext_resource type="Script" uid="uid://cc4grn664qei5" path="res://dolls/doll_class.gd" id="1_bcu12"]
+
+[node name="dolls" type="Node"]
+script = ExtResource("1_bcu12")
+
+[node name="kyuki" type="Node" parent="." groups=["dolls"]]
+script = ExtResource("1_axm2f")

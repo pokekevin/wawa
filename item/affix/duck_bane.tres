@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Affix" load_steps=2 format=3 uid="uid://l634maefl02f"]
+
+[ext_resource type="Script" uid="uid://ciwalre0kdt7o" path="res://item/affix_class.gd" id="1_rfvay"]
+
+[resource]
+script = ExtResource("1_rfvay")
+name = "Duck Bane"
+type = "Suffix"
+effect = ""
+effect_value = 0.0
+description = "Bane of Ducks"
+metadata/_custom_type_script = "uid://ciwalre0kdt7o"

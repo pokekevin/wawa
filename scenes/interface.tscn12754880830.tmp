@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bkrekcvnc807d"]
+
+[ext_resource type="Script" uid="uid://2s08m0gpgtd6" path="res://ui/interface.gd" id="1_s0di0"]
+[ext_resource type="PackedScene" uid="uid://cylo05yed47ko" path="res://scenes/battle.tscn" id="1_tg63u"]
+[ext_resource type="Script" uid="uid://f7iiyd025w1n" path="res://ui/expedition.gd" id="2_nwt6j"]
+[ext_resource type="Script" uid="uid://crwqxucg50qdl" path="res://ui/save_load.gd" id="2_s0di0"]
+[ext_resource type="PackedScene" uid="uid://drjepndr8068e" path="res://ui/menu.tscn" id="2_vceqh"]
+[ext_resource type="Script" uid="uid://3twd8fi5ajr1" path="res://scenes/expedition_party.gd" id="3_pr3t4"]
+[ext_resource type="Script" uid="uid://sjrfjctm6mse" path="res://party/party.gd" id="7_5tchh"]
+[ext_resource type="Script" uid="uid://dyorcyqk6uc8s" path="res://party/inventory.gd" id="8_5tchh"]
+[ext_resource type="Script" uid="uid://cb11xjgii1afe" path="res://ui/signal_bus.gd" id="8_t62tn"]
+
+[node name="interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s0di0")
+
+[node name="expedition" type="Node" parent="."]
+script = ExtResource("2_nwt6j")
+
+[node name="battle" parent="expedition" instance=ExtResource("1_tg63u")]
+unique_name_in_owner = true
+
+[node name="map" type="Control" parent="expedition"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="expedition_party" type="Node" parent="expedition"]
+script = ExtResource("3_pr3t4")
+
+[node name="menu" parent="." instance=ExtResource("2_vceqh")]
+unique_name_in_owner = true
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="utilities" type="Node" parent="."]
+
+[node name="party" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("7_5tchh")
+
+[node name="inventory" type="Node" parent="party"]
+script = ExtResource("8_5tchh")
+
+[node name="saveloader" type="Node" parent="."]
+script = ExtResource("2_s0di0")
+
+[node name="signal_bus" type="Node" parent="."]
+script = ExtResource("8_t62tn")
+
+[connection signal="confirm_party" from="expedition" to="expedition/battle" method="_on_expedition_confirm_party"]

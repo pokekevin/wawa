@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DollDefault" format=3 uid="uid://dltk8nbl0co6o"]
+
+[ext_resource type="Script" uid="uid://bchgauy72hxqk" path="res://dolls/doll_default.gd" id="1_ttjgs"]
+
+[resource]
+script = ExtResource("1_ttjgs")
+name = "Dummy"
+diTrait = "None"
+doll_trait_desc = "N/A"
+metadata/_custom_type_script = "uid://bchgauy72hxqk"
