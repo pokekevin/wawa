@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="event" format=3 uid="uid://ia7v5tftrfxv"]
 
-[ext_resource type="Script" uid="uid://36325ffmp3tl" path="res://expedition/event.gd" id="1_qxa7j"]
+[ext_resource type="Script" uid="uid://36325ffmp3tl" path="res://expedition/event.gd" id="1_risj4"]
 
 [resource]
-script = ExtResource("1_qxa7j")
-name = "Fifth Battle"
+script = ExtResource("1_risj4")
+name = "Second Battle"
 type = "story"
 text = "You proceed to the next stage."
 metadata/_custom_type_script = "uid://36325ffmp3tl"

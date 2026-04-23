@@ -26,16 +26,22 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Guild" type="Control" parent="menu_select" unique_id=1091845015]
+[node name="Company" type="Control" parent="menu_select" unique_id=763088705]
 layout_mode = 2
 metadata/_tab_index = 1
-
-[node name="Company" type="Control" parent="menu_select" unique_id=763088705]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 2
 
 [node name="Synthesis" type="Control" parent="menu_select" unique_id=1999579724]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Market" type="Control" parent="menu_select" unique_id=80435072]
+visible = false
+layout_mode = 2
 metadata/_tab_index = 3
+
+[node name="Guild" type="Control" parent="menu_select/Market" unique_id=1091845015]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0

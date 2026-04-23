@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DollDefault" format=3 uid="uid://cjpv8kh6lnpt4"]
+
+[ext_resource type="Script" uid="uid://bchgauy72hxqk" path="res://dolls/doll_default.gd" id="1_gnw2l"]
+
+[resource]
+script = ExtResource("1_gnw2l")
+name = "Kiana"
+metadata/_custom_type_script = "uid://bchgauy72hxqk"
