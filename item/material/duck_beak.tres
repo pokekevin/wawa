@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bdlexet2wuibw"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bdlexet2wuibw"]
 
 [ext_resource type="Script" uid="uid://b8c4sw7u7qoba" path="res://item/item_class.gd" id="1_1utw6"]
 
@@ -8,6 +8,5 @@ address = "res://item/material/duck_beak.tres"
 name = "Duck Beak"
 type = "Material"
 description = "The beak of a duck. Smells funny."
-value = 20.0
-amount = 0
-metadata/_custom_type_script = ExtResource("1_1utw6")
+value = 2.0
+metadata/_custom_type_script = "uid://b8c4sw7u7qoba"

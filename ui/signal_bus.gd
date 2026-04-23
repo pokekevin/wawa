@@ -8,3 +8,6 @@ signal game_state_change(new_state)
 signal party_confirmed(doll1, doll2, doll3, doll4)
 
 signal game_load()
+
+
+signal gold_change(amount)

@@ -62,17 +62,16 @@ func add_equipment(item):
 	items_equipment.set(equipment["base"].name, equipment)
 
 #remove item function; see above for array optimization problems
-func remove_item(item_address: String, amount: int):
-	var item = ResourceLoader.load(item_address)
+func remove_item(item: Resource, amount: int):
 	if item.type == "Loot":
 		if items_loot.has(item.name):
-			items_loot.get(item.name)["amount"] -= 1
+			items_loot.get(item.name)["amount"] -= amount
 			if items_loot.get(item.name)["amount"] == 0:
 				items_loot.erase(item.name)
 				return "empty"
 	if item.type == "Material":
 		if items_material.has(item.name):
-			items_material.get(item.name)["amount"] -= 1
+			items_material.get(item.name)["amount"] -= amount
 			if items_material.get(item.name)["amount"] == 0:
 				items_material.erase(item.name)
 				return "empty"

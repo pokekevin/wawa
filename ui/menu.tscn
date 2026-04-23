@@ -26,9 +26,10 @@ offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_fonts/font = SubResource("SystemFont_bwjgb")
 tab_alignment = 2
-current_tab = 0
+current_tab = 2
 
 [node name="Expedition" type="Control" parent="menu_select" unique_id=829548892]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -276,7 +277,6 @@ size_flags_horizontal = 0
 metadata/_tab_index = 2
 
 [node name="Inventory" type="MarginContainer" parent="menu_select" unique_id=1516087582]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -286,10 +286,9 @@ color = Color(0.238494, 0.196305, 0.232302, 1)
 
 [node name="TabContainer" type="TabContainer" parent="menu_select/Inventory" unique_id=2100090147]
 layout_mode = 2
-current_tab = 1
+current_tab = 0
 
 [node name="Items" type="MarginContainer" parent="menu_select/Inventory/TabContainer" unique_id=158046175]
-visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -387,6 +386,7 @@ layout_mode = 2
 text = "asdf"
 
 [node name="Equipment" type="MarginContainer" parent="menu_select/Inventory/TabContainer" unique_id=953070999]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -564,6 +564,14 @@ text = "                  Exit                   "
 [node name="jukebox" type="AudioStreamPlayer2D" parent="." unique_id=876282989]
 stream = ExtResource("8_cp6tm")
 parameters/looping = true
+
+[node name="gold counter" type="RichTextLabel" parent="." unique_id=99154209]
+layout_mode = 0
+offset_left = 1038.0
+offset_top = 621.0
+offset_right = 1149.0
+offset_bottom = 644.0
+text = "Gold: xxxxxx"
 
 [connection signal="pressed" from="menu_select/Expedition/doll_choose_confirmation" to="." method="_on_doll_choose_confirmation_pressed"]
 [connection signal="pressed" from="menu_select/Expedition/test dialog" to="." method="_on_test_dialog_pressed"]

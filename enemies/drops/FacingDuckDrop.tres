@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DropTable" load_steps=4 format=3 uid="uid://br6rn6jcek1tu"]
+[gd_resource type="Resource" script_class="DropTable" format=3 uid="uid://br6rn6jcek1tu"]
 
 [ext_resource type="Resource" uid="uid://brnwa2fb6pfob" path="res://item/loot/duck_feather.tres" id="1_74l5s"]
 [ext_resource type="Resource" uid="uid://bdlexet2wuibw" path="res://item/material/duck_beak.tres" id="2_a83xp"]
@@ -8,12 +8,7 @@
 script = ExtResource("3_dlkt6")
 name = "Facing Duck"
 drop1 = ExtResource("1_74l5s")
-drop1chance = 100.0
+drop1chance = 50.0
 drop2 = ExtResource("2_a83xp")
-drop2chance = 100.0
-drop3chance = 0.0
-drop4chance = 0.0
-drop5chance = 0.0
-drop6chance = 0.0
-drop7chance = 0.0
-metadata/_custom_type_script = ExtResource("3_dlkt6")
+drop2chance = 50.0
+metadata/_custom_type_script = "uid://o0ph3s6a783d"

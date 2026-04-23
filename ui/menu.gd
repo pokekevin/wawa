@@ -9,6 +9,9 @@ func _ready():
 	for i in range(Party.doll_list.size()):
 		add_listing(Party.doll_list[i])
 	expedition_party_confirm(Party.kyuki, Party.kyuki, Party.kyuki, Party.kyuki)
+	
+	SignalBus.gold_change.connect(_on_gold_changed)
+	$"gold counter".text = "Gold: " + str(Party.gold)
 
 func expedition_party_confirm(doll1, doll2, doll3, doll4):
 	pass
@@ -71,3 +74,8 @@ func _on_expedition_expedition_end():
 	$menu_select/Expedition/doll_choose_list.show()
 	$menu_select/Expedition/doll_choose_confirmation.show()
 	$menu_select/Expedition/WARNING.show()
+
+
+func _on_gold_changed(amount):
+	Party.gold += amount
+	$"gold counter".text = "Gold: " + str(Party.gold)

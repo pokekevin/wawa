@@ -20,11 +20,11 @@ grow_vertical = 2
 script = ExtResource("1_s0di0")
 
 [node name="start_menu" parent="." unique_id=482016007 instance=ExtResource("11_rlv52")]
+visible = false
 layout_mode = 0
 
 [node name="menu" parent="." unique_id=2029417833 instance=ExtResource("2_vceqh")]
 unique_name_in_owner = true
-visible = false
 top_level = true
 layout_mode = 1
 anchors_preset = 15
@@ -54,5 +54,4 @@ script = ExtResource("2_s0di0")
 script = ExtResource("8_t62tn")
 
 [node name="sosim" parent="." unique_id=1508430789 instance=ExtResource("9_vceqh")]
-visible = false
 layout_mode = 0
