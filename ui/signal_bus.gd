@@ -11,3 +11,4 @@ signal game_load()
 
 
 signal gold_change(amount)
+signal inventory_changed

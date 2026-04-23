@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://7qo2kstuq0cy"]
+
+[ext_resource type="Resource" uid="uid://dphwhpq0h4h17" path="res://item/affix/duck_help.tres" id="1_bd67n"]
+[ext_resource type="Script" uid="uid://b2ahpsi34828i" path="res://item/equipment_class.gd" id="1_iswmm"]
+
+[resource]
+script = ExtResource("1_iswmm")
+name = "Wooden Sword"
+type = "Weapon"
+description = "A wooden sword."
+affix = ExtResource("1_bd67n")
+wAD = 4
+rank = "F"
+metadata/_custom_type_script = "uid://b2ahpsi34828i"

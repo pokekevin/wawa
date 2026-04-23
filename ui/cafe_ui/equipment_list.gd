@@ -6,13 +6,27 @@ var current_item
 
 #inits n shit
 func _ready():
+	SignalBus.inventory_changed.connect(inventory_changed)
+	
 	#testing
 	Party.add_item(ResourceLoader.load("res://item/equipment/duck_sword.tres"), 1)
 	#loops through loot and mat dicts in party and puts them in 2 lists on the ui
+	inventory_changed()
+
+func inventory_changed():
+	var location
+	location = get_node("HBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer")
+	if location.get_child_count() > 0:
+		var children = location.get_children()
+		for c in children:
+			location.remove_child(c)
+			c.queue_free()
+	
 	for key in Party.items_equipment.keys():
 		add_node(Party.items_equipment[key])
 	for key in AffixList.affix_dictionary.keys():
 		add_affixes_dropdown(AffixList.affix_dictionary[key])
+
 
 #add node func
 func add_node(item):

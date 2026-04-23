@@ -2,21 +2,39 @@ extends MarginContainer
 #controls the item submenu in the Cafe menu
 
 var current_list
+var current_item
 
 #inits n shit
 func _ready():
+	SignalBus.inventory_changed.connect(inventory_changed)
+	
 	Party.add_item(ResourceLoader.load("res://item/loot/duck_feather.tres"), 2)
 	Party.add_item(ResourceLoader.load("res://item/material/duck_beak.tres"), 6)
 	#testing
 	
 	#loops through loot and mat dicts in party and puts them in 2 lists on the ui
+	inventory_changed()
+
+func inventory_changed():
+	var location
+	location = get_node("HBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer")
+	free_current(location)
+	location = get_node("HBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2")
+	free_current(location)
+	
 	current_list = "loot"
 	for key in Party.items_loot.keys():
 		add_node(Party.items_loot[key])
 	current_list = "material"
 	for key in Party.items_material.keys():
 		add_node(Party.items_material[key])
-var current_item
+
+func free_current(location):
+	if location.get_child_count() > 0:
+		var children = location.get_children()
+		for c in children:
+			location.remove_child(c)
+			c.queue_free()
 
 #add node func
 func add_node(item):
@@ -53,14 +71,14 @@ func update_item(current_item):
 
 #add and remove item test buttons
 func _on_add_pressed():
-	Party.add_item(current_item["base"].address, 1)
+	Party.add_item(current_item["base"], 1)
 	if current_item["base"].type == "Loot":
 		change_item(Party.items_loot[current_item["base"].name])
 	if current_item["base"].type == "Material":
 		change_item(Party.items_material[current_item["base"].name])
 
 func _on_remove_pressed():
-	Party.remove_item(current_item["base"].address, 1)
+	Party.remove_item(current_item["base"], 1)
 	if current_item["base"].type == "Loot":
 		change_item(Party.items_loot[current_item["base"].name])
 	if current_item["base"].type == "Material":

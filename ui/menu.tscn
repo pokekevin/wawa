@@ -286,9 +286,10 @@ color = Color(0.238494, 0.196305, 0.232302, 1)
 
 [node name="TabContainer" type="TabContainer" parent="menu_select/Inventory" unique_id=2100090147]
 layout_mode = 2
-current_tab = 0
+current_tab = 1
 
 [node name="Items" type="MarginContainer" parent="menu_select/Inventory/TabContainer" unique_id=158046175]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -386,7 +387,6 @@ layout_mode = 2
 text = "asdf"
 
 [node name="Equipment" type="MarginContainer" parent="menu_select/Inventory/TabContainer" unique_id=953070999]
-visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 0

@@ -48,6 +48,7 @@ func add_item(item_added: Resource, amount: int):
 	elif item["base"].type == "Weapon" or "Uniform" or "Beacon" or "Ring" or "Perfume":
 		for i in amount:
 			add_equipment(item)
+	SignalBus.inventory_changed.emit()
 
 func add_equipment(item):
 	var equipment: Dictionary = {
@@ -58,8 +59,15 @@ func add_equipment(item):
 		"affix3": ResourceLoader.load("res://item/affix/duck_bane.tres"),
 		"affix4": ResourceLoader.load("res://item/affix/duck_bane.tres"),
  	}
-	
-	items_equipment.set(equipment["base"].name, equipment)
+	if items_equipment.has(equipment["name"]) == false:
+		items_equipment.set(equipment["base"].name, equipment)
+	else:
+		var equip_name = equipment["name"]
+		var looper = 1
+		while items_equipment.has(equip_name):
+			equip_name = equipment["name"] + str(looper)
+			looper += 1
+		items_equipment.set(equip_name, equipment)
 
 #remove item function; see above for array optimization problems
 func remove_item(item: Resource, amount: int):
@@ -75,6 +83,7 @@ func remove_item(item: Resource, amount: int):
 			if items_material.get(item.name)["amount"] == 0:
 				items_material.erase(item.name)
 				return "empty"
+	SignalBus.inventory_changed.emit()
 
 
 
