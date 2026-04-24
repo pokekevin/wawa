@@ -5,7 +5,9 @@ signal hour_change(new_time)
 signal day_change(new_day)
 
 signal game_state_change(new_state)
-signal party_confirmed(doll1, doll2, doll3, doll4)
+
+signal start_adv
+signal party_confirmed(adv, dolls: Array, weapons: Array, uniform, beacon, perfume, ring)
 
 signal game_load()
 

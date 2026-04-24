@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cw8obd7i8j53t"]
+
+[ext_resource type="Resource" uid="uid://l634maefl02f" path="res://item/affix/duck_bane.tres" id="1_3ns7g"]
+[ext_resource type="Script" uid="uid://b2ahpsi34828i" path="res://item/equipment_class.gd" id="1_abmqe"]
+
+[resource]
+script = ExtResource("1_abmqe")
+name = "Sailour Uniform"
+type = "Uniform"
+description = "A sailor uniform."
+affix = ExtResource("1_3ns7g")
+wAD = 5
+metadata/_custom_type_script = "uid://b2ahpsi34828i"

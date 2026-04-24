@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="MarketList" format=3 uid="uid://brn3owvkvdjte"]
 
 [ext_resource type="Script" uid="uid://cqd3hm0yyi2k1" path="res://sosim/market/market_list.gd" id="1_ng8xl"]
-[ext_resource type="Resource" uid="uid://cs1g5dlv1xron" path="res://item/equipment/duck_sword.tres" id="2_jlxm3"]
+[ext_resource type="Resource" uid="uid://cs1g5dlv1xron" path="res://item/equipment/weapons/duck_sword.tres" id="2_jlxm3"]
 [ext_resource type="Resource" uid="uid://bdlexet2wuibw" path="res://item/material/duck_beak.tres" id="3_qhhuw"]
-[ext_resource type="Resource" uid="uid://7qo2kstuq0cy" path="res://item/equipment/wooden_sword.tres" id="4_qhhuw"]
+[ext_resource type="Resource" uid="uid://7qo2kstuq0cy" path="res://item/equipment/weapons/wooden_sword.tres" id="4_qhhuw"]
 
 [resource]
 script = ExtResource("1_ng8xl")

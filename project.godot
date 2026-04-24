@@ -41,6 +41,7 @@ Console="*uid://ouiu5xh1cs8n"
 SignalBus="*res://ui/signal_bus.gd"
 AffixList="*res://item/affix_list.gd"
 Dialogic="*uid://ds2q0uclmolvu"
+AdventureList="*uid://de3mmay1bg6ie"
 
 [dialogic]
 

@@ -16,8 +16,11 @@ func _ready():
 	#$expedition/battle.queue_free()
 	#gets rid of existing battles
 	
-	pass
+	SignalBus.start_adv.connect(start_expedition)
 
+func start_expedition():
+	self.add_child(preload("res://scenes/expedition.tscn").instantiate())
+	$sosim.hide()
 
 
 func _on_battle_battle_end_signal():

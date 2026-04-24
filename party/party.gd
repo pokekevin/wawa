@@ -1,21 +1,10 @@
 extends Node
-#script holding all doll information
+#script holding all save data info total srp death
 #anything that needs to be changed should come here or extend from here
-#definitely a better way to do this but im too retarded to figure out how to save it XD nested dictionary icant
 #I LOVE HASHMAPS I LOVE HASHMAPS I LOVE HASHMAPS
 
-
-
-func stat_raise(doll, stat, value):
-	doll[stat] += value
-
-
-
-
-var time_day = 1
-#counts up from 1
-var time_hour = 1
-#counts up to 4 from 1
+func _ready():
+	pass
 
 
 var items_equipment : Dictionary
@@ -87,6 +76,18 @@ func remove_item(item: Resource, amount: int):
 
 
 
+#/////////////////#
+
+
+
+var progression : Dictionary = {
+	"time_day": 1,
+	#counts up from 1
+	"time_hour": 1,
+	#counts up to 4 from 1
+	"adv_completed" : []
+	#array of completed adventures
+}
 
 var company: Dictionary = {
 	"Rank": 1,
@@ -111,6 +112,11 @@ var company: Dictionary = {
 #///////////////////////#
 #dolls
 #///////////////////////#
+
+func stat_raise(doll, stat, value):
+	doll[stat] += value
+
+
 #kei dictionary for kei's proficiencies
 var kei: Dictionary = {
 	"authority": 0,
@@ -228,17 +234,15 @@ var kosellia: Dictionary = {
 func doll_gain(doll):
 	doll_list.append(doll)
 #change this when you add a new doll
-var doll_list: Array = [kyuki, kosellia, kiana, kyuki]
+var doll_list: Array = [kyuki, kiana, kosellia, kyuki]
 
 #final savefile that everything else needs to go under
 var savefile: Dictionary
 #save
 func update_save():
 	savefile = {
+	"progression": progression,
 	"doll_list" : doll_list,
-	
-	"time_day": time_day,
-	"time_hour": time_hour,
 	
 	"gold" : gold,
 	
@@ -256,6 +260,7 @@ func update_save():
 
 #load
 func update_party():
+	progression = savefile["progression"]
 	doll_list = savefile["doll_list"]
 	
 	gold = savefile["gold"]
@@ -264,9 +269,6 @@ func update_party():
 	items_material = savefile["items_material"]
 	
 	company = savefile["company"]
-	
-	time_day = savefile["time_day"]
-	time_hour = savefile["time_hour"]
 	
 	kei = savefile["kei"]
 	kyuki = savefile["kyuki"]

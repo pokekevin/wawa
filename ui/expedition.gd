@@ -6,6 +6,8 @@ var current_party = {}
 #the party that ends up going into battle
 var party_array = []
 #the array that goes into func enter_battle()
+var weapon_array = []
+#same as above
 
 var current_enemy
 
@@ -18,24 +20,22 @@ signal confirm_party
 #init vars
 
 func _ready():
+	SignalBus.party_confirmed.connect(_party_confirmed)
+	
 	$expedition_end_screen.hide()
-	
-	get_parent().get_node("%menu").party_confirmed.connect(party_confirmed) #menu signal for party confirmation
-	
+		
 	update_signage()
 
 func update_signage():
 	$expedition_ui/entrance.text = "Entrance: " + current_floor + ", Viridian Forest"
 	$expedition_ui/stage_number.text = "Current Stage: " + str(current_stage)
 
-func party_confirmed(array, adventure_resource):
-	for i in array.size():
-		party_array.append(Party.doll_list[array[i]])
-	expedition_start(ResourceLoader.load(adventure_resource))
-	
-	#current_stage = ResourceLoader.load(stage)
-	#encounter(current_stage)
-#from menu
+func _party_confirmed(adv, dolls, weapons, uniform, beacon, perfume, ring):
+	expedition_start(adv)
+	for i in dolls.size():
+		party_array.append(dolls[i])
+		weapon_array.append(weapons[i])
+
 
 #location info
 var current_state = "map"

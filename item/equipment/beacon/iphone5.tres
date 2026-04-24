@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cixlq2cbq3b0j"]
+
+[ext_resource type="Resource" uid="uid://l634maefl02f" path="res://item/affix/duck_bane.tres" id="1_sgxq2"]
+[ext_resource type="Script" uid="uid://b2ahpsi34828i" path="res://item/equipment_class.gd" id="2_k0gw3"]
+
+[resource]
+script = ExtResource("2_k0gw3")
+name = "Iphone 5"
+type = "Beacon"
+description = "An Iphone 5"
+affix = ExtResource("1_sgxq2")
+wAD = 2
+metadata/_custom_type_script = "uid://b2ahpsi34828i"

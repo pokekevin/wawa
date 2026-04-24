@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="adventure" format=3 uid="uid://cue03bv6pafg1"]
+
+[ext_resource type="Resource" uid="uid://cxbhr2n6rw6xe" path="res://expedition/event/5-1/duck_battle.tres" id="1_8j4qg"]
+[ext_resource type="Script" uid="uid://coyv4b6udha0k" path="res://expedition/adventure.gd" id="1_tiali"]
+
+[resource]
+script = ExtResource("1_tiali")
+number = "5-1"
+type = "mobber"
+name = "Duck Town"
+description = "Beginner route with a lot of duck gremlin things"
+length = 12
+boss = ExtResource("1_8j4qg")
+encounter1 = ExtResource("1_8j4qg")
+weighting1 = 100
+metadata/_custom_type_script = "uid://coyv4b6udha0k"

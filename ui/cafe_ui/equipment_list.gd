@@ -9,7 +9,11 @@ func _ready():
 	SignalBus.inventory_changed.connect(inventory_changed)
 	
 	#testing
-	Party.add_item(ResourceLoader.load("res://item/equipment/duck_sword.tres"), 1)
+	Party.add_item(ResourceLoader.load("res://item/equipment/weapons/duck_sword.tres"), 1)
+	Party.add_item(ResourceLoader.load("res://item/equipment/beacon/iphone5.tres"), 1)
+	Party.add_item(ResourceLoader.load("res://item/equipment/ring/wedding_ring.tres"), 1)
+	Party.add_item(ResourceLoader.load("res://item/equipment/uniform/sailor.tres"), 1)
+	Party.add_item(ResourceLoader.load("res://item/equipment/perfume/dogshit.tres"), 1)
 	#loops through loot and mat dicts in party and puts them in 2 lists on the ui
 	inventory_changed()
 

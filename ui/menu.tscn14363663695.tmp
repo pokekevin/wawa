@@ -52,6 +52,32 @@ offset_right = 1114.48
 offset_bottom = 541.475
 text = "Total Drops:"
 
+[node name="doll_choose_list" type="ItemList" parent="menu_select/Expedition" unique_id=50729395]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 21.0
+offset_right = 300.0
+offset_bottom = 578.0
+select_mode = 1
+
+[node name="doll_choose_confirmation" type="Button" parent="menu_select/Expedition" unique_id=277437469]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 547.0
+offset_right = 385.0
+offset_bottom = 578.0
+text = "Confirm"
+
+[node name="WARNING" type="TextEdit" parent="menu_select/Expedition" unique_id=1722118530]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 18.0
+offset_right = 754.0
+offset_bottom = 109.0
+text = "IF YOU DO NOT INSTANCE BATTLE FIRST OR SELECT
+MORE/LESS THAN 4 YOUR GAME MAY CRASH
+YES THERE IS A WAY TO FIX IT NO I DO NOT CARE"
+
 [node name="test dialog" type="Button" parent="menu_select/Expedition" unique_id=327386895]
 layout_mode = 0
 offset_left = 956.394
@@ -547,6 +573,7 @@ offset_right = 1149.0
 offset_bottom = 644.0
 text = "Gold: xxxxxx"
 
+[connection signal="pressed" from="menu_select/Expedition/doll_choose_confirmation" to="." method="_on_doll_choose_confirmation_pressed"]
 [connection signal="pressed" from="menu_select/Expedition/test dialog" to="." method="_on_test_dialog_pressed"]
 [connection signal="pressed" from="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer/add" to="menu_select/Inventory/TabContainer/Items" method="_on_add_pressed"]
 [connection signal="pressed" from="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer/remove" to="menu_select/Inventory/TabContainer/Items" method="_on_remove_pressed"]

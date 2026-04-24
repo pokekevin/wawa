@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="adventure" format=3 uid="uid://c0hq317k7bun7"]
 
 [ext_resource type="Script" uid="uid://coyv4b6udha0k" path="res://expedition/adventure.gd" id="1_2j8ur"]
-[ext_resource type="Resource" uid="uid://ccsfap0085hcb" path="res://expedition/expedition/event/5-1/first_battle.tres" id="1_xbkhb"]
-[ext_resource type="Resource" uid="uid://cxbhr2n6rw6xe" path="res://expedition/expedition/event/5-1/duck_battle.tres" id="2_xpynp"]
+[ext_resource type="Resource" uid="uid://ccsfap0085hcb" path="res://expedition/event/5-1/first_battle.tres" id="1_xbkhb"]
+[ext_resource type="Resource" uid="uid://cxbhr2n6rw6xe" path="res://expedition/event/5-1/duck_battle.tres" id="2_xpynp"]
 
 [resource]
 script = ExtResource("1_2j8ur")
