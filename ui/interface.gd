@@ -17,11 +17,11 @@ func _ready():
 	#gets rid of existing battles
 	
 	SignalBus.start_adv.connect(start_expedition)
+	SignalBus.expedition_end.connect(end_expedition)
 
 func start_expedition():
 	self.add_child(preload("res://scenes/expedition.tscn").instantiate())
 	$sosim.hide()
 
-
-func _on_battle_battle_end_signal():
-	pass # Replace with function body.
+func end_expedition():
+	$sosim.show()

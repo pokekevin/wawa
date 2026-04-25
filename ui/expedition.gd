@@ -267,12 +267,11 @@ func end_expedition():
 #end of expedition and tallying of loot and exp
 
 
-signal expedition_end
-
 func return_from_expedition():
 	for key in expedition_drops.keys():
 		Party.add_item(expedition_drops[key]["base"], expedition_drops[key]["amount"]) 
-	expedition_end.emit()
+	SignalBus.expedition_end.emit()
+	
 	self.queue_free()
 
 func _on_end_expedition_pressed():

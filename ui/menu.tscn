@@ -32,34 +32,6 @@ current_tab = 0
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="battle_end_info" type="RichTextLabel" parent="menu_select/Expedition" unique_id=950410268]
-top_level = true
-layout_mode = 0
-offset_left = 323.727
-offset_top = 155.065
-offset_right = 715.727
-offset_bottom = 347.065
-text = "Battle End
-EXP: x
-Item Drops:"
-
-[node name="battle_end_info2" type="RichTextLabel" parent="menu_select/Expedition" unique_id=382821940]
-top_level = true
-layout_mode = 0
-offset_left = 777.477
-offset_top = 59.4753
-offset_right = 1114.48
-offset_bottom = 541.475
-text = "Total Drops:"
-
-[node name="test dialog" type="Button" parent="menu_select/Expedition" unique_id=327386895]
-layout_mode = 0
-offset_left = 956.394
-offset_top = 512.666
-offset_right = 964.394
-offset_bottom = 520.666
-text = "test dialog"
-
 [node name="Cafe" type="MarginContainer" parent="menu_select" unique_id=340820307]
 visible = false
 layout_mode = 2
@@ -547,7 +519,6 @@ offset_right = 1149.0
 offset_bottom = 644.0
 text = "Gold: xxxxxx"
 
-[connection signal="pressed" from="menu_select/Expedition/test dialog" to="." method="_on_test_dialog_pressed"]
 [connection signal="pressed" from="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer/add" to="menu_select/Inventory/TabContainer/Items" method="_on_add_pressed"]
 [connection signal="pressed" from="menu_select/Inventory/TabContainer/Items/HBoxContainer/VSplitContainer/VBoxContainer/remove" to="menu_select/Inventory/TabContainer/Items" method="_on_remove_pressed"]
 [connection signal="item_selected" from="menu_select/Inventory/TabContainer/Equipment/HBoxContainer/VSplitContainer/VBoxContainer/affix1" to="menu_select/Inventory/TabContainer/Equipment" method="_on_affix_1_item_selected"]
